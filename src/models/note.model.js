@@ -25,4 +25,4 @@ export const NOTE_COLLECTION_NAME = 'Note'
 
 const Note = mongoose.model(NOTE_COLLECTION_NAME, noteSchema)
 
-export default Note
+export default Note;
