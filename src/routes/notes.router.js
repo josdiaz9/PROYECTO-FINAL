@@ -48,4 +48,4 @@ notesRouter.delete(
     notesController.eliminarNota
 );
 
-export default notesRouter;
+export default notesRouter
