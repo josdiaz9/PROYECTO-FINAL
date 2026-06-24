@@ -14,7 +14,7 @@ if (ENVIRONMENT.MODE === 'development') {
 connectMongoDB()
 
 import cors from 'cors'
-import errorHandlerMiddleware from "./middlewares/error.middleware.js";
+//import errorHandlerMiddleware from "./middlewares/error.middleware.js";
 
 const app = express();
 const PORT = ENVIRONMENT.PORT;
@@ -26,11 +26,11 @@ app.use(cors())
 app.use(express.json());
 
 app.use('/api/auth', authRouter);
-app.use('/api/workspace', workspaceRouter)
+//app.use('/api/workspace', workspaceRouter)
 
 //Siempre debe estar al final
 //Esto es debido a que este middleware se ejecutara entre el controller y la response del servidor
-app.use(errorHandlerMiddleware)
+//app.use(errorHandlerMiddleware)
 
 app.listen(PORT, () => {
     console.log(`Servidor corriendo en http://localhost:${PORT}`);
