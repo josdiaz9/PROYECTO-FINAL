@@ -9,10 +9,20 @@ const noteSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    fk_id_autor: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User', // <--- Apunta al nombre del modelo de usuarios
+        required: true
+    },
     fecha_creacion: {
         type: Date,
         required: true,
-        default: Date.now()
+        default: Date.now
+    },
+    fecha_actualizacion: {
+        type: Date,
+        required: true,
+        default: Date.now
     },
     activo: {
         type: Boolean,
