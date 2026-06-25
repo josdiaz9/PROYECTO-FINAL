@@ -1,7 +1,7 @@
 import ENVIRONMENT from "../config/environment.config.js";
 import mailer_transport from "../config/mailer.config.js";
-//import ServerError from "../helpers/serverError.helper.js";
-//import userRepository from "../repositories/user.repository.js";
+import ServerError from "../helpers/serverError.helper.js";
+import userRepository from "../repositories/user.repository.js";
 import bcrypt from 'bcrypt'
 import jwt from 'jsonwebtoken'
 

@@ -1,3 +1,4 @@
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
 import ENVIRONMENT from "./config/environment.config.js";
 import connectMongoDB from "./config/mongodb.config.js";
 import express from "express";
