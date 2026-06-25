@@ -1,7 +1,7 @@
 import express from 'express';
-//import notesController from '../controllers/notes.controller.js';
-//import authMiddleware from '../middlewares/auth.middleware.js'; // El patovica de login
-//import noteMiddleware from '../middlewares/note.middleware.js'; // El patovica de tu diagrama
+import notesController from '../controllers/notes.controller.js';
+import authMiddleware from '../middlewares/auth.middleware.js';
+import noteMiddleware from '../middlewares/note.middleware.js';
 
 const notesRouter = express.Router();
 
