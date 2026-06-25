@@ -5,7 +5,9 @@ const connectMongoDB = async () => {
     try {
         await mongoose.connect(
             ENVIRONMENT.MONGO_DB_CONNECTION_STRING + '/' + ENVIRONMENT.MONGO_DB_NAME, {
-            connectTimeoutMS: 30000
+            connectTimeoutMS: 30000,
+            tls: true,                          // Fuerza el uso de TLS/SSL
+            tlsAllowInvalidCertificates: true
         }
         )
         console.log("La conexion con MongoDB funciona")
